@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.4.3 (RELEASE-2.4.3-ad3323c; 2019-01-21T17:46:06+0000) JAXWS-RI/2.3.2 JAXWS-API/2.3.2 JAXB-RI/2.3.2 JAXB-API/2.3.2 git-revision#unknown. --><xs:schema xmlns:tns="http://services.javamovies.mycompany.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://services.javamovies.mycompany.com/">
+
+<xs:element name="Exception" type="tns:Exception"/>
+
+<xs:element name="NonexistentEntityException" type="tns:NonexistentEntityException"/>
+
+<xs:element name="addContent" type="tns:addContent"/>
+
+<xs:element name="addContentResponse" type="tns:addContentResponse"/>
+
+<xs:element name="deleteContent" type="tns:deleteContent"/>
+
+<xs:element name="deleteContentResponse" type="tns:deleteContentResponse"/>
+
+<xs:element name="findAll" type="tns:findAll"/>
+
+<xs:element name="findAllResponse" type="tns:findAllResponse"/>
+
+<xs:element name="findContent" type="tns:findContent"/>
+
+<xs:element name="findContentResponse" type="tns:findContentResponse"/>
+
+<xs:element name="moviestvshow" type="tns:moviestvshow"/>
+
+<xs:element name="updateContent" type="tns:updateContent"/>
+
+<xs:element name="updateContentResponse" type="tns:updateContentResponse"/>
+
+<xs:complexType name="addContent">
+<xs:sequence>
+<xs:element name="arg0" type="tns:moviestvshow" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="moviestvshow">
+<xs:sequence>
+<xs:element name="category" type="xs:string" minOccurs="0"/>
+<xs:element name="contentId" type="xs:int"/>
+<xs:element name="dataPublished" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="description" type="xs:string" minOccurs="0"/>
+<xs:element name="director" type="xs:string" minOccurs="0"/>
+<xs:element name="duration" type="xs:int"/>
+<xs:element name="episodeNo" type="xs:int"/>
+<xs:element name="episodeTitle" type="xs:string" minOccurs="0"/>
+<xs:element name="genre" type="xs:string" minOccurs="0"/>
+<xs:element name="producer" type="xs:string" minOccurs="0"/>
+<xs:element name="seasonNo" type="xs:int"/>
+<xs:element name="thumbnail" type="xs:base64Binary" minOccurs="0"/>
+<xs:element name="title" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addContentResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="deleteContent">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteContentResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="NonexistentEntityException">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateContent">
+<xs:sequence>
+<xs:element name="arg0" type="tns:moviestvshow" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateContentResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="Exception">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findAll">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="findAllResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:moviestvshow" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findContent">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findContentResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:moviestvshow" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
